@@ -3,9 +3,24 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
 	<title>Login</title>
 </head>
-<body>
+	<body>
+		<div class="contenedor1">
+			<form class="contenedor1__Login">
 
-</body>
+				<input class="contenedor1__Login__nombre" type="text" placeholder="Nombre" required>
+				<input class="contenedor1__Login__email" type="email" placeholder="Email" required>
+				<input class="contenedor1__Login__contraseña" type="password" placeholder="Contraseña" required>
+				<input class="contenedor1__Login__confContraseña" type="password" placeholder="Confirmar contraseña" required>
+				<input class="contenedor1__Login__enviar" type="submit" required>
+			</form>
+		</div>
+	</body>
 </html>
