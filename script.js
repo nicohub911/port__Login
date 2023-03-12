@@ -104,7 +104,7 @@ function Registrar(){
 }
 
 function Logear(){
-    if (nombre.value === nombreReg && email.value === emailReg && contraseña.value === contraseñaReg) {
+    if (nombre.value === nombreReg && email.value === emailReg && contraseña.value === contraseñaReg && nombre.value != null && email.value != null && contraseña.value != null) {
         mensajeBueno.innerHTML = "Te has logeado";
         window.innerWidth < 1599 ? ventanaLogeo.style.transform = "translateX(100%)" : ventanaLogeo.style.transform = "translateX(406px)";
     } else {
