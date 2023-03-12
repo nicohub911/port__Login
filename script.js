@@ -12,9 +12,9 @@ const ventanaLogeo = document.querySelector(".contenedor1__Login__estado2");
 const okLogeado = document.querySelector(".contenedor1__Login__estado2__boton")
 const mensajeBueno = document.querySelector(".contenedor1__Login__estado2__p");
 var tipo = false;
-var nombreReg = "";
-var emailReg = "";
-var contraseñaReg = "";
+var nombreReg = null;
+var emailReg = null;
+var contraseñaReg = null;
 
 Enviar.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -104,7 +104,8 @@ function Registrar(){
 }
 
 function Logear(){
-    if (nombre.value === nombreReg && email.value === emailReg && contraseña.value === contraseñaReg && nombre.value != "" && email.value != "" && contraseña.value != "") {
+    let caracteres = nombre.value + email.value + contraseña.value;
+    if (nombre.value === nombreReg && email.value === emailReg && contraseña.value === contraseñaReg && caracteres.length > 3) {
         mensajeBueno.innerHTML = "Te has logeado";
         window.innerWidth < 1599 ? ventanaLogeo.style.transform = "translateX(100%)" : ventanaLogeo.style.transform = "translateX(406px)";
     } else {
